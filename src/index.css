@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@theme {
+  --color-onyx: oklch(0.1641 0.0244 147.13);
+  --color-yellow: oklch(0.9628 0.1986 108.69);
+  --color-white: oklch(0.9956 0.0021 17.19);
+}
+
+@layer base {
+  body {
+    @apply bg-onyx text-white;
+  }
+}
+
+@layer components {}
+
+@layer utilities {}

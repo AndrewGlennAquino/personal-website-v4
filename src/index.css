@@ -47,4 +47,18 @@
 
 @layer components {}
 
-@layer utilities {}
+@layer utilities {
+  .text-glow-pink {
+    text-shadow:
+      0 0 12px var(--color-pink),
+      0 0 24px var(--color-pink),
+      0 0 48px var(--color-pink);
+  }
+
+  .text-glow-cyan {
+    text-shadow:
+      0 4px 0 #00393D,
+      0 0 12px var(--color-cyan),
+      0 0 24px var(--color-cyan)
+  }
+}

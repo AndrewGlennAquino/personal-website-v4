@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "roboto-mono";
+  src: url("./assets/fonts/roboto-mono.ttf");
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("./assets/fonts/roboto.ttf");
+}
+
 @theme {
   --color-onyx: oklch(0.1641 0.0244 147.13);
   --color-yellow: oklch(0.9628 0.1986 108.69);

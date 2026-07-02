@@ -43,7 +43,7 @@ export function Title() {
 
       <Center position={[0, -0.5, 0]}>
         <LinkCube
-          url="https://github.com/your-username"
+          url="https://github.com/AndrewGlennAquino"
           color="#24292e"
           position={[-0.5, 0, 0]}
           texture={GitHubLogo}
@@ -51,7 +51,7 @@ export function Title() {
 
         {/* LinkedIn Cube */}
         <LinkCube
-          url="https://linkedin.com/in/your-username"
+          url="https://linkedin.com/in/andrew-glenn-aquino"
           color="#0077b5" // LinkedIn blue
           position={[0.5, 0, 0]}
           texture={LinkedInLogo}

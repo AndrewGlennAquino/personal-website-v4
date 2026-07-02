@@ -34,17 +34,21 @@ export function LinkCube({
     <mesh
       position={position}
       ref={meshRef}
-      onPointerOver={() => {
+      onPointerOver={(e) => {
+        e.stopPropagation();
         setHovered(true);
         document.body.style.cursor = "pointer"; // Change cursor to pointer for UX
       }}
-      onPointerOut={() => {
+      onPointerOut={(e) => {
+        e.stopPropagation();
         setHovered(false);
         document.body.style.cursor = "auto"; // Reset cursor
       }}
-      onClick={() => {
-        window.open(url, "_blank", "noopener,noreferrer");
+      onClick={(e) => {
+        e.stopPropagation();
+        window.open(url);
       }}
+      castShadow
     >
       <boxGeometry args={[0.5, 0.5, 0.5]} />
       <meshStandardMaterial color={hovered ? "#ffffff" : color} />

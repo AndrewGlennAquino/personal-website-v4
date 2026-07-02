@@ -1,6 +1,6 @@
 {
   "name": "personal-website-v4",
-  "homepage": "https://AndrewGlennAquino.github.io/personal-website-v4",
+  "homepage": "https://andrewglennaquino.github.io/personal-website-v4",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",

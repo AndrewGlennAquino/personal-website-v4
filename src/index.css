@@ -14,13 +14,7 @@
   --font-roboto: "roboto", sans-serif;
   --font-roboto-mono: "roboto-mono", monospace;
   --color-onyx: oklch(0.1448 0 0);
-  --color-gray: oklch(0.1913 0 0);
-  --color-midnight: oklch(0.1599 0.0752 302.18);
-  --color-yellow: oklch(0.9628 0.1986 108.69);
   --color-white: oklch(0.9956 0.0021 17.19);
-  --color-pink: oklch(0.71 0.2514 332.87);
-  --color-cyan: oklch(0.868042 0.147166 203.4935);
-  --color-indigo: oklch(0.5057 0.2722 295.5);
 }
 
 @layer base {
@@ -29,38 +23,8 @@
   :root {
     @apply bg-onyx font-roboto text-white;
   }
-
-  h1 {
-    @apply font-roboto-mono font-bold text-4xl sm:text-5xl md:text-6xl;
-  }
-
-  h2 {
-    @apply text-2xl sm:text-3xl md:text-4xl;
-  }
-
-  h3 {
-    @apply text-xl;
-  }
-
-  li {
-    @apply list-none;
-  }
 }
 
 @layer components {}
 
-@layer utilities {
-  .text-glow-pink {
-    text-shadow:
-      0 0 12px var(--color-pink),
-      0 0 24px var(--color-pink),
-      0 0 48px var(--color-pink);
-  }
-
-  .text-glow-cyan {
-    text-shadow:
-      0 4px 0 #00393d,
-      0 0 12px var(--color-cyan),
-      0 0 24px var(--color-cyan);
-  }
-}
+@layer utilities {}

@@ -1,25 +1,46 @@
-import { Globe } from "./Globe";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Stars } from "@react-three/drei";
+import {
+  Environment,
+  OrbitControls,
+  Html,
+  useProgress,
+} from "@react-three/drei";
+import { Plane } from "./Plane";
+import { Title } from "./Title";
+
+function CanvasLoader() {
+  const { progress } = useProgress();
+  return <Html center>{progress.toFixed(1)}% loaded</Html>;
+}
 
 export function HeroBackground() {
   return (
     <Canvas
-      className="bg-linear-to-b from-midnight to-onyx w-full h-full relative -z-10"
-      aria-label="Starry Background"
-      role="img"
+      shadows="basic"
+      camera={{ position: [0, 0, 5], fov: 75 }}
     >
-      <ambientLight />
-      <Globe />
-      <Stars
-        radius={100}
-        depth={100}
-        count={1000}
-        factor={10}
-        saturation={10}
-        fade
-        speed={1}
-      />
+      <Suspense fallback={<CanvasLoader />}>
+        <group>
+          <Title />
+          <Plane />
+        </group>
+        <directionalLight
+          castShadow
+          shadow-mapSize={[1024, 1024]}
+          position={[0, 1, 2]}
+          intensity={1}
+        />
+        <OrbitControls
+          autoRotate
+          autoRotateSpeed={1}
+          enablePan={false}
+          enableZoom={false}
+          minPolarAngle={Math.PI / 2.1}
+          maxPolarAngle={Math.PI / 2.1}
+        />
+        <Environment background preset="dawn" backgroundBlurriness={1} />;
+      </Suspense>
     </Canvas>
   );
 }

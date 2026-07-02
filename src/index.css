@@ -24,8 +24,10 @@
 }
 
 @layer base {
-  body {
-    @apply bg-onyx text-white;
+  html,
+  body,
+  :root {
+    @apply bg-onyx font-roboto text-white;
   }
 
   h1 {

@@ -21,7 +21,7 @@
   html,
   body,
   :root {
-    @apply bg-onyx font-roboto text-white;
+    @apply bg-white text-onyx;
   }
 }
 
